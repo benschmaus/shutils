@@ -1,5 +1,5 @@
 " set color scheme
-:colo darkblue
+:colo desert
 
 syntax on
 
