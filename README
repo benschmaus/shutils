@@ -1,6 +1,5 @@
-To use these plugins add the following lines to
-your .vimrc file.
-
+" To use these plugins add the following lines to
+" your .vimrc file.
 " Append local vimruntime dir to runtimepath so plugins
 " can be autoloaded.
 set runtimepath+=~/vimruntime
