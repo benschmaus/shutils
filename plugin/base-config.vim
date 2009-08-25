@@ -45,7 +45,8 @@ map <C-Left> :tabp<CR>
 
 
 " Run contents of current buffer through xmllint.
-"command XmlFormat exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
+command XmlFormat exe ":silent %!xmllint --format --recover - 2>/dev/null"
+map <Leader>xf :XmlFormat<CR>
 
 " For autotag plugin that updates tag files on file save
 let g:autotagCtagsCmd="/usr/local/bin/ctags"
