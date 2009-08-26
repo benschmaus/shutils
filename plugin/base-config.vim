@@ -30,7 +30,8 @@ set dir=~/vim-swap-files
 if has("gui_running")
   " GUI is running or is about to start.
   " Maximize gvim window.
-  set lines=60 columns=170
+   set lines=50
+  set columns=170
 endif
 
 set nocompatible
@@ -43,9 +44,10 @@ map <C-Left> :tabp<CR>
 :au BufRead *.java,*.py,*.rb,*.php,*.js retab
 :au BufWrite *.* silent! %s/[\r \t]\+$//
 
-
 " Run contents of current buffer through xmllint.
-"command XmlFormat exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
+command XmlFormat exe ":silent %!xmllint --format --recover - 2>/dev/null"
+map <Leader>xf :XmlFormat
 
 " For autotag plugin that updates tag files on file save
 let g:autotagCtagsCmd="/usr/local/bin/ctags"
+
