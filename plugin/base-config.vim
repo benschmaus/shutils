@@ -10,6 +10,7 @@ set expandtab
 
 " display line numbers by default
 set number
+set ruler
 
 set wildmode=longest:list
 
