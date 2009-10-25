@@ -1,5 +1,5 @@
 " set color scheme
-:colo desert
+colo default
 
 syntax on
 
@@ -10,6 +10,7 @@ set expandtab
 
 " display line numbers by default
 set number
+set ruler
 
 set wildmode=longest:list
 
@@ -21,7 +22,7 @@ set visualbell t_vb=
 
 " Keep swap files in one place
 if !isdirectory($HOME . "/vim-swap-files")
-  :call mkdir($HOME . "/vim-swap-files", "p")
+  call mkdir($HOME . "/vim-swap-files", "p")
 endif
 set dir=~/vim-swap-files
 
@@ -30,8 +31,8 @@ set dir=~/vim-swap-files
 if has("gui_running")
   " GUI is running or is about to start.
   " Maximize gvim window.
-   set lines=50
-  set columns=170
+  set lines=50 columns=170
+  colo desert
 endif
 
 set nocompatible
@@ -41,12 +42,12 @@ map <C-Down> :bp<CR>
 map <C-Right> :tabn<CR>
 map <C-Left> :tabp<CR>
 
-:au BufRead *.java,*.py,*.rb,*.php,*.js retab
-:au BufWrite *.* silent! %s/[\r \t]\+$//
+au BufRead *.java,*.py,*.rb,*.php,*.js retab
+au BufWrite *.* silent! %s/[\r \t]\+$//
 
 " Run contents of current buffer through xmllint.
 command XmlFormat exe ":silent %!xmllint --format --recover - 2>/dev/null"
-map <Leader>xf :XmlFormat
+map <Leader>xf :XmlFormat<CR>
 
 " For autotag plugin that updates tag files on file save
 let g:autotagCtagsCmd="/usr/local/bin/ctags"
