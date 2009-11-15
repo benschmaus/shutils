@@ -42,8 +42,9 @@ map <C-Down> :bp<CR>
 map <C-Right> :tabn<CR>
 map <C-Left> :tabp<CR>
 
-au BufRead *.java,*.py,*.rb,*.php,*.js retab
-au BufWrite *.* silent! %s/[\r \t]\+$//
+" leave whitespace alone
+"au BufRead *.java,*.py,*.rb,*.php,*.js retab
+"au BufWrite *.* silent! %s/[\r \t]\+$//
 
 " Run contents of current buffer through xmllint.
 command XmlFormat exe ":silent %!xmllint --format --recover - 2>/dev/null"
