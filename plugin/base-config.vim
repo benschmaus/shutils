@@ -50,6 +50,9 @@ map <C-Left> :tabp<CR>
 command XmlFormat exe ":silent %!xmllint --format --recover - 2>/dev/null"
 map <Leader>xf :XmlFormat<CR>
 
+command LoadUrl exe ":silent %!xargs curl 2>/dev/null"
+map <Leader>lu :LoadUrl<CR>
+
 " For autotag plugin that updates tag files on file save
 let g:autotagCtagsCmd="/usr/local/bin/ctags"
 
