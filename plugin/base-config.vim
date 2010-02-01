@@ -42,7 +42,9 @@ map <C-Down> :bp<CR>
 map <C-Right> :tabn<CR>
 map <C-Left> :tabp<CR>
 
-" leave whitespace alone
+set viminfo='100,f0
+
+" leave whitespace alone...
 "au BufRead *.java,*.py,*.rb,*.php,*.js retab
 "au BufWrite *.* silent! %s/[\r \t]\+$//
 
@@ -50,7 +52,7 @@ map <C-Left> :tabp<CR>
 command XmlFormat exe ":silent %!xmllint --format --recover - 2>/dev/null"
 map <Leader>xf :XmlFormat<CR>
 
-command LoadUrl exe ":silent %!xargs curl 2>/dev/null"
+command LoadUrl exe ":silent 1!xargs curl 2>/dev/null"
 map <Leader>lu :LoadUrl<CR>
 
 " For autotag plugin that updates tag files on file save
