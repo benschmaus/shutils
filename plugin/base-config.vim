@@ -1,3 +1,5 @@
+set nocompatible
+
 " set color scheme
 colo default
 
@@ -35,12 +37,8 @@ if has("gui_running")
   colo desert
 endif
 
-set nocompatible
-
-map <C-Up> :bn<CR>
-map <C-Down> :bp<CR>
-map <C-Right> :tabn<CR>
-map <C-Left> :tabp<CR>
+nmap <S-n> :bn<CR>
+nmap <S-p> :bp<CR>
 
 set viminfo='100,f0
 
