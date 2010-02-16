@@ -96,3 +96,5 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_File_Fold_Auto_Close = 1
 
 let Tlist_Inc_Winwidth=0
+
+nmap <silent> TP <Plug>ToggleProject
