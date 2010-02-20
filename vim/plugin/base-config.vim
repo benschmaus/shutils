@@ -76,7 +76,7 @@ map <Leader>lu :LoadUrl<CR>
 
 " For autotag plugin that updates tag files on file save
 let g:autotagCtagsCmd="/usr/local/bin/ctags"
-let g:autotagDisabled=1
+let g:autotagDisabled=0
 
 " For taglist plugin
 let Tlist_Ctags_Cmd=g:autotagCtagsCmd
