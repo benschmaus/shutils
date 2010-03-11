@@ -69,10 +69,10 @@ set viminfo='100,f0
 
 " Run contents of current buffer through xmllint.
 command XmlFormat exe ":silent %!xmllint --format --recover - 2>/dev/null"
-map <Leader>xf :XmlFormat<CR>
+map <Leader>Xf :XmlFormat<CR>
 
 command LoadUrl exe ":silent 1!xargs curl 2>/dev/null"
-map <Leader>lu :LoadUrl<CR>
+map <Leader>Lu :LoadUrl<CR>
 
 " For autotag plugin that updates tag files on file save
 let g:autotagCtagsCmd="/usr/local/bin/ctags"
