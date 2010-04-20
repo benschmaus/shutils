@@ -20,7 +20,7 @@ set wildmode=longest:list
 
 " Only fold blocks with more than 12 lines
 set foldmethod=indent
-set foldminlines=12
+set foldminlines=2
 
 set visualbell t_vb=
 
