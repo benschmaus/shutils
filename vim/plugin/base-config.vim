@@ -3,7 +3,7 @@ set nocompatible
 " set color scheme
 colo default
 
-filetype on
+filetype plugin indent on
 
 syntax on
 
